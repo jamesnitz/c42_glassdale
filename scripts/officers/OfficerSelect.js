@@ -14,7 +14,6 @@ const render = officersCollection => {
     `
 }
 
-
 export const officerSelect = () => {
   getOfficers().then(() => {
     const officers = useOfficers()
@@ -32,7 +31,6 @@ eventHub.addEventListener("change", changeEvent => {
                 officer: selectedOfficer
             }
         })
-
         // Dispatch event to event hub
         eventHub.dispatchEvent(customEvent)
     }
