@@ -22,7 +22,6 @@ eventHub.addEventListener('officerSelected', event => {
         const matchingCriminals = criminals.filter(criminal => criminal.arrestingOfficer === event.detail.officer)
         render(matchingCriminals)
     } else {
-        // if an officer isn't selected then return all the criminals
         render(criminals)
     }
 })
