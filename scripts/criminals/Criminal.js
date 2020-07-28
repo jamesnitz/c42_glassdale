@@ -9,7 +9,7 @@ export const criminalComponent = (criminalObject) => {
             <p>Term end: ${new Date(criminalObject.incarceration.end).toLocaleDateString()}</p>
         </div>
         <button class="criminal__button" id="associates--${criminalObject.id}">Associate Alibis</button>
-        <dialog class="dialogcriminals" id="details--">
+        <dialog id="dialog--${criminalObject.id}" class="dialogcriminals">
             ${criminalObject.known_associates.map(
                 assoc =>
                 `
