@@ -14,6 +14,7 @@ eventHub.addEventListener("crimeChosen", event => {
   }
 })
 
+
 eventHub.addEventListener('officerSelected', event => {
     const criminals = useCriminals()
 
