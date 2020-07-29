@@ -2,9 +2,39 @@
   "notes": [
     {
       "text": "test",
-      "criminalId": 0,
+      "criminalId": 2,
       "timestamp": "7/27/2020",
       "id": 2
+    },
+    {
+      "text": "new note",
+      "criminalId": 63,
+      "timestamp": "7/29/2020",
+      "id": 3
+    },
+    {
+      "text": "gulp",
+      "criminalId": 73,
+      "timestamp": "7/29/2020",
+      "id": 4
+    },
+    {
+      "text": "anotherf",
+      "criminalId": 27,
+      "timestamp": "7/29/2020",
+      "id": 5
+    },
+    {
+      "text": "more",
+      "criminalId": 3,
+      "timestamp": "7/29/2020",
+      "id": 6
+    },
+    {
+      "text": "more notes",
+      "criminalId": 4,
+      "timestamp": "7/29/2020",
+      "id": 7
     }
   ]
 }

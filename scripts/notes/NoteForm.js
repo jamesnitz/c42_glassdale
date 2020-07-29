@@ -4,32 +4,35 @@ import { saveNote } from "./NoteProvider.js"
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
 
-const render = () => {
+const renderNoteForm = () => {
     getCriminals().then(() => {
         const criminalsCollection = useCriminals()
 
         contentTarget.innerHTML = `
-        <fieldset>
-        <label class="label" for="note-text">Note:</>
-        <input type="text" id="note-text">
-        </fieldset>
-        <fieldset>
-        <label class="label" for="note-criminal">Criminal:</>
-        <select id="note-criminal">
-        <option value="0">***Select Criminal***</option>
-        ${criminalsCollection.map(criminal => {
-            return `<option value="${criminal.id}">${criminal.name}</option>`
-        })}
-        </select>
-        </fieldset>
-        <button id="saveNote">Save Note</button>
+            <fieldset>
+                <label class="label" for="note-text">Note:</>
+                <input type="text" id="note-text">
+            </fieldset>
+            <fieldset>
+                <label class="label" for="note-criminal">Criminal:</>
+                <select id="note-criminal">
+                <option value="0">***Select Criminal***</option>
+                ${criminalsCollection.map(criminal => {
+                    return `<option value="${criminal.id}">${criminal.name}</option>`
+                })}
+                </select>
+            </fieldset>
+            <button id="saveNote">Save Note</button>
         `
     })
 }
 
+eventHub.addEventListener("noteFormButtonClicked", event => {
+  NoteForm()
+})
+
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
-
         const noteText = document.getElementById("note-text")
         const noteCriminalId = document.getElementById("note-criminal")
 
@@ -39,7 +42,7 @@ eventHub.addEventListener("click", clickEvent => {
             criminalId: Number(noteCriminalId.value),
             timestamp: new Date(Date.now()).toLocaleDateString()
         }
-
+  
         // Change API state and application state
         saveNote(newNote)
         
@@ -51,5 +54,5 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 export const NoteForm = () => {
-  render()
+  renderNoteForm()
 }

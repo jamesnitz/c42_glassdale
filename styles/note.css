@@ -1,0 +1,11 @@
+.note{
+  border: 1px solid black;
+  flex-basis: 15%;
+  padding: 1em;
+  margin: 1em;
+}
+
+.noteList{
+  display: flex;
+  flex-wrap: wrap;
+}
