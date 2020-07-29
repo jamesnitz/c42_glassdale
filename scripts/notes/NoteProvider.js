@@ -1,7 +1,6 @@
 let notes = []
 
 export const useNotes = () => notes.slice()
-
 const eventHub = document.querySelector(".container")
 
 const dispatchStateChangeEvent = () => {
@@ -35,4 +34,16 @@ export const deleteNote = noteId => {
         method: "DELETE"
     })
         .then(getNotes)
+}
+
+export const editNote = (noteObject) => {
+  return fetch(`http://localhost:8088/notes/${noteObject.id}`, {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(noteObject)
+  })
+  .then(getNotes)
+  .then(dispatchStateChangeEvent)
 }

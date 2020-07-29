@@ -1,5 +1,6 @@
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".note_button")
+const noteFormButtonTarget = document.querySelector(".noteForm_button")
 
 eventHub.addEventListener("click", event => {
     if (event.target.id === "noteButton") {
@@ -9,6 +10,7 @@ eventHub.addEventListener("click", event => {
       contentTarget.innerHTML =  `
       <button id="noteFormButton">Show Form</button>
       `
+      noteFormButtonTarget.innerHTML = ""
     }
   })
   eventHub.addEventListener("click", event => {
