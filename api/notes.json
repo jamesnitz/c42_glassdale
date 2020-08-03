@@ -1,28 +1,10 @@
 {
   "notes": [
     {
-      "id": 1,
-      "text": "testeditasd",
-      "criminalId": 2,
-      "timestamp": "7/29/2020"
-    },
-    {
       "id": 2,
       "text": "ubaldo",
       "criminalId": 16,
       "timestamp": "7/29/2020"
-    },
-    {
-      "id": 3,
-      "text": "saved a new note!",
-      "criminalId": 1,
-      "timestamp": "7/31/2020"
-    },
-    {
-      "text": "testtestests",
-      "criminalId": 3,
-      "timestamp": "7/31/2020",
-      "id": 4
     }
   ]
 }

@@ -51,8 +51,8 @@ const render = (notes) => {
         <h6>${note.timestamp}</h6>
         <h2>Note about ${foundCriminal.name}</h2>
         ${note.text}<br>
-        <button id="editNote--${note.id}">Edit</button>
-        <button id="deleteNote--${note.id}">Delete</button>
+        <button class="noteButton" id="editNote--${note.id}">Edit</button>
+        <button class="noteButton" id="deleteNote--${note.id}">Delete</button>
         </section>
         `
       }).join("")
