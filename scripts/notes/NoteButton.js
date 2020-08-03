@@ -12,20 +12,22 @@ eventHub.addEventListener("click", event => {
       `
       noteFormButtonTarget.innerHTML = ""
     }
-  })
-  eventHub.addEventListener("click", event => {
-    if (event.target.id === "noteFormButton") {
-      console.log("noteFormButtonClicked")
-      const showForm = new CustomEvent("noteFormButtonClicked")
-      eventHub.dispatchEvent(showForm)
-      contentTarget.innerHTML =  `
-         <button id="noteButton">Show Notes</button>
-      `
-    }
+})
+
+
+eventHub.addEventListener("click", event => {
+  if (event.target.id === "noteFormButton") {
+    console.log("noteFormButtonClicked")
+    const showForm = new CustomEvent("noteFormButtonClicked")
+    eventHub.dispatchEvent(showForm)
+    contentTarget.innerHTML =  `
+        <button id="noteButton">Show Notes</button>
+    `
+  }
 })
 
 export const NoteButton = () => {
-    contentTarget.innerHTML = `
-        <button id="noteButton">Show Notes</button>
-    `
+  contentTarget.innerHTML = `
+      <button id="noteButton">Show Notes</button>
+  `
 }

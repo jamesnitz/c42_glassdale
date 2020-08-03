@@ -26,6 +26,15 @@ eventHub.addEventListener('officerSelected', event => {
     }
 })
 
+eventHub.addEventListener("click", event => {
+  if (event.target.id === "witness_criminal_Button") {
+    const allCriminals = useCriminals()
+    render(allCriminals)
+    const customEvent = new CustomEvent("witness_Criminal_ButtonClicked")
+    eventHub.dispatchEvent(customEvent)
+  }
+})
+
 export const criminalList = () => {
   getCriminals().then(() => {
     const allCriminals = useCriminals()

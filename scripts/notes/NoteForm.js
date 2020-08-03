@@ -48,7 +48,7 @@ eventHub.addEventListener("editButtonClicked", event => {
     const allNotesArray = useNotes()
     const foundNote = allNotesArray.find(note => note.id === noteToBeEdited)
     console.log(foundNote)
-     document.querySelector("#note-id").value = foundNote.id
+    document.querySelector("#note-id").value = foundNote.id
     document.querySelector("#note-text").value = foundNote.text
     document.querySelector("#note-criminal").value = foundNote.criminalId
 
@@ -75,7 +75,7 @@ eventHub.addEventListener("click", clickEvent => {
              if (noteText.value !== "" && noteCriminalId.value !== "0") {
                  const newNote = {
                      text: noteText.value,
-                     criminalId: Number(noteCriminalId.value),
+                     criminalId: Number(noteCriminalId.value),  
                      timestamp: new Date(Date.now()).toLocaleDateString()
                     }           
                     saveNote(newNote)
