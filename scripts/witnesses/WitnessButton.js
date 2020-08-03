@@ -1,4 +1,3 @@
-
 const contentTarget = document.querySelector(".witness_button")
 const eventHub = document.querySelector(".container")
 

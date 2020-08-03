@@ -13,6 +13,18 @@
   flex-wrap: wrap;
 }
 
+.noteField{
+  background-color: rgb(231, 215, 247);
+}
+.noteForm{
+  border: 4px solid chartreuse;
+  background-color: rgb(192, 231, 218);
+  margin: .5em;
+  padding: 1em;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
 
 .noteButton{
   background-color: rgb(11, 26, 243);

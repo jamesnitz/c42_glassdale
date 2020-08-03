@@ -4,8 +4,6 @@ import { witnessComponent } from "./Witness.js";
 const contentElement = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
-
-
 eventHub.addEventListener("click", event => {
   if (event.target.id === "witnessButton") {
     render()

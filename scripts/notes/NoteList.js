@@ -49,7 +49,7 @@ const render = (notes) => {
         return `
         <section class="note">
         <h6>${note.timestamp}</h6>
-        <h2>Note about ${foundCriminal.name}</h2>
+        <h3>${foundCriminal.name}</h3>
         ${note.text}<br>
         <button class="noteButton" id="editNote--${note.id}">Edit</button>
         <button class="noteButton" id="deleteNote--${note.id}">Delete</button>

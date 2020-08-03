@@ -6,7 +6,7 @@ import "./criminals/KnownAssociates.js";
 import { NoteButton } from "./notes/NoteButton.js";
 import  "./notes/NoteList.js";
 import { WitnessButton } from "./witnesses/WitnessButton.js";
-import "./witnesses/WitnessList.js"
+import "./witnesses/WitnessList.js  "
 criminalList()
 convictionSelect()
 officerSelect()

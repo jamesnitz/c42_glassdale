@@ -9,20 +9,19 @@ const renderNoteForm = () => {
     let criminalsCollection = useCriminals()
     const renderSelect = () => {
         contentTarget.innerHTML = `
-        <input type="hidden" class="hiddenId" id="note-id" />
-        <fieldset>
-        <label class="label" for="note-text">Note:</>
-        <input type="text" id="note-text">
-        </fieldset>
-        <fieldset>
-        <label class="label" for="note-criminal">Criminal:</>
-        <select id="note-criminal">
-        <option value="0">***Select Criminal***</option>
-        ${criminalsCollection.map(criminal => {
-            return `<option value="${criminal.id}">${criminal.name}</option>`
-        })}
-        </select>
-        </fieldset>
+            <div class="noteForm">
+                <h3>Note Form</h3>
+                <input type="hidden" class="hiddenId" id="note-id" />
+                <label class="label" for="note-criminal">Criminal:</>
+                <select class="noteField" id="note-criminal">
+                    <option value="0">Select a Criminal</option>
+                    ${criminalsCollection.map(criminal => {
+                        return `<option value="${criminal.id}">${criminal.name}</option>`
+                    })}
+                </select>
+                <label class="label" for="note-text">Note:</>
+                <input type="text" class="noteField" id="note-text" placeholder="who...dunnit??">
+            </div>
         `
         noteFormButtonTarget.innerHTML = `<button id="saveNote">Save Note</button>`
     }
@@ -67,8 +66,8 @@ eventHub.addEventListener("click", clickEvent => {
                  }
              ) 
             document.querySelector(".note_button").innerHTML = `<button id="noteButton">Show Notes</button>`
-             document.querySelector("#note-text").value = ""
-             document.querySelector("#note-criminal").value = ""
+            document.querySelector("#note-text").value = ""
+            document.querySelector("#note-criminal").value = ""
          } else {
              const noteText = document.getElementById("note-text")
              const noteCriminalId = document.getElementById("note-criminal")
