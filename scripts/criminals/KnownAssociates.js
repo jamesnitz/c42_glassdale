@@ -5,7 +5,7 @@ eventHub.addEventListener("click", theEvent => {
     const [prefix, criminalId] = theEvent.target.id.split("--")
     const theDialog = document.querySelector(`#dialog--${criminalId}`)
     theDialog.showModal()
-  } else if (theEvent.target.classList.contains("button--close")) {
+  } else if (theEvent.target.id ==="associateCloseButton") {
     const dialogElement = theEvent.target.parentNode
     dialogElement.close()
   }  

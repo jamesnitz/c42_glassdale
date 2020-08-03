@@ -10,14 +10,15 @@ export const criminalComponent = (criminalObject) => {
         </div>
         <button class="criminal__button" id="associates--${criminalObject.id}">Associate Alibis</button>
         <dialog id="dialog--${criminalObject.id}" class="dialogcriminals">
+           <h4>${criminalObject.name}'s ${criminalObject.known_associates.length > 1 ? "Alibis" : "Alibi"}</h4>
             ${criminalObject.known_associates.map(
                 assoc =>
                 `
                     <div><strong>Name</strong>: ${assoc.name}</div>
                     <div><strong>Alibi</strong>: ${assoc.alibi}</div><br>
                 `
-            ).join("")}
-            <button class="button--close">Close</button>
+            ).join("------------------------")}
+            <button id="associateCloseButton">Close</button>
         </dialog>
     </div>
     `
